@@ -1,0 +1,172 @@
+.bl_message_swiper {
+    width: 79%;
+    &_wrapper {
+        width: 80%;
+        padding: 60px 80px;
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        border-radius: 32px;
+        background-color: #fff;
+    }
+    &_img { 
+        & > img {
+            width: 230px;
+            height: 230px;
+        }
+    }
+    &_content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 33px;
+        &_ttl {
+            font-size: clamp( 1.8rem, 2.5vw, 2.6rem);
+            font-weight: bold;
+            color: #969696;
+        }
+        &_text {
+            line-height: 1.9;
+            font-size: clamp( 1.3rem, 1.7vw, 1.8rem);
+            font-weight: bold;
+        }
+    }
+}
+.swiper-pagination {
+    bottom: -60px !important;
+}
+.swiper_container {
+    position: relative;
+}
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap,16px);
+}
+.swiper-pagination-bullet {
+    width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,20px));
+    height: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,20px));
+}
+.swiper-pagination-bullet-active {
+    background: linear-gradient(to right, #FF8008, #FFC837);
+}
+.swiper-button-next {
+    width: 70px;
+    height: 70px;
+    right: 14%;
+    border-radius: 40px;
+    background: linear-gradient(to right, #FF8008, #FFC837);
+    &::before {
+        content: "";
+        position: absolute;
+        right: 25px;
+        width: 24px;
+        height: 3px;
+        border-radius: 2px;
+        background: #fff;
+    }
+    &::after {
+        content: "";
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        right: 25px;
+        border-top: 3px solid #fff;
+        border-right: 3px solid #fff;
+        border-radius: 2px;
+        transform: rotate(45deg);
+    }
+}
+.swiper-button-prev {
+    width: 70px;
+    height: 70px;
+    left: 14%;
+    border-radius: 40px;
+    background: linear-gradient(to right, #FF8008, #FFC837);
+    &::before {
+        content: "";
+        position: absolute;
+        left: 25px;
+        width: 24px;
+        height: 3px;
+        border-radius: 2px;
+        background: #fff;
+    }
+    &::after {
+        content: "";
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        left: 25px;
+        border-top: 3px solid #fff;
+        border-right: 3px solid #fff;
+        border-radius: 2px;
+        transform: rotate(-135deg);
+    }
+}
+@media (max-width: 959px) {
+    .bl_message_swiper {
+        width: 100%;
+        &_wrapper {
+            width: 100%;
+            padding: 30px 20px;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        &_img { 
+            & > img {
+                width: 170px;
+                height: 170px;
+            }
+        }
+        &_content {
+            justify-content: start;
+            align-items: center;
+            gap: 15px;
+        }
+    }
+    .swiper-pagination {
+        bottom: -30px !important;
+    }
+    .swiper_container {
+        position: relative;
+    }
+    .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 0 var(--swiper-pagination-bullet-horizontal-gap,16px);
+    }
+    .swiper-pagination-bullet {
+        width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,12px));
+        height: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,12px));
+    }
+    .swiper-button-next {
+        width: 40px;
+        height: 40px;
+        right: 1%;
+        &::before {
+            right: 15px;
+            width: 13px;
+            height: 2px;
+        }
+        &::after {
+            content: "";
+            width: 13px;
+            height: 13px;
+            right: 14px;
+        }
+    }
+    .swiper-button-prev {
+        width: 40px;
+        height: 40px;
+        left: 1%;
+        &::before {
+            left: 15px;
+            width: 13px;
+            height: 2px;
+        }
+        &::after {
+            content: "";
+            width: 13px;
+            height: 13px;
+            left: 14px;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+.bl_nav {
+    &_menu {
+        display: flex;
+        gap: clamp( 10px, 3vw, 50px);
+        align-items: center;
+        &_li {
+            & > a {
+                color: #fff;
+                font-size: 2.0rem;
+                font-weight: bold;           
+            }
+        }
+    }
+}
