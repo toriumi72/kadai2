@@ -24,7 +24,7 @@ body {
     color: #fff;
     line-height: 3.2;
     &::before {
-        content: url(/images/fv_icon.png);
+        content: url(../images/fv_icon.png);
         position: absolute;
         top: 2px;
         left: 88px;
